@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicação de criação e compartilhamento de posts com integração a API pública">
+    <title>Social Post Creator - Compartilhe suas ideias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Social Post Creator</h1>
+            <p>Compartilhe suas ideias com o mundo</p>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <article class="post-form-section">
+                <h2>Criar um novo Post</h2>
+                
+                <form id="formulario-post" aria-label="Formulário para criar novo post">
+                    <div class="form-group">
+                        <label for="titulo-input">Título do Post</label>
+                        <input 
+                            type="text" 
+                            id="titulo-input" 
+                            placeholder="Digite o título do seu post"
+                            required
+                            aria-required="true"
+                            aria-describedby="titulo-help"
+                        >
+                        <small id="titulo-help">Máximo de 100 caracteres recomendado</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conteudo-input">Conteúdo do Post</label>
+                        <textarea 
+                            id="conteudo-input" 
+                            rows="8"
+                            placeholder="Digite o conteúdo do seu post aqui..."
+                            required
+                            aria-required="true"
+                            aria-describedby="conteudo-help"
+                        ></textarea>
+                        <small id="conteudo-help">Compartilhe seus pensamentos, experiências e ideias</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit" aria-label="Enviar o post para publicação">
+                        Publicar Post
+                    </button>
+                </form>
+            </article>
+
+            <aside class="post-preview-section">
+                <h2>Visualização do Post</h2>
+                
+                <article class="post-preview" id="post-preview">
+                    <h3 id="renderizador-titulo" class="preview-title">
+                        Seu título aparecerá aqui
+                    </h3>
+                    <p id="renderizador-conteudo" class="preview-content">
+                        O conteúdo do seu post será exibido nesta área
+                    </p>
+                    <footer class="post-meta">
+                        <span class="post-id" id="post-id">ID do Post: Pendente</span>
+                        <span class="post-user" id="post-user">Usuário: 1</span>
+                    </footer>
+                </article>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Social Post Creator. Desenvolvido com JavaScript e Fetch API.</p>
+        <p>Utilizando <a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">JSONPlaceholder</a> como API de exemplo</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
